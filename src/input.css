@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Cherry+Bomb+One&family=Merriweather:ital,wght@1,300&family=Montserrat:wght@300&family=Noto+Serif&family=REM:wght@300&family=Roboto:wght@100&family=Ubuntu:wght@300&family=Ysabeau+Office:wght@300&display=swap");
+:root {
+  --clr: #fff;
+  --clr-bg: #000;
+  --clr-bg-body: rgb(17 24 39);
+  --clr-border: rgb(84, 65, 65);
+  --clr-border-hover: rgb(243, 243, 243);
+  --clr-card: rgb(31 41 55);
+  --clr-card-hover: rgba(205, 204, 204, 0.22);
+  --clr-gradient: radial-gradient(
+    circle at center right,
+    rgb(220, 38, 38),
+    rgb(29, 78, 216)
+  );
+}
+.lightMode {
+  --clr: #040404;
+  --clr-bg: #ffffff;
+  --clr-bg-body: #f0f0f0;
+  --clr-border: rgb(180, 176, 176);
+  --clr-border-hover: rgb(92, 92, 92);
+  --clr-card: rgb(209 213 219);
+  --clr-card-hover: rgb(113, 113, 113, 0.1);
+}
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--clr-bg-body);
+  height: auto;
+}
+section {
+  min-height: 100vh;
+}
+nav ul.show {
+  background: var(--clr-bg);
+  margin-top: 10px;
+}
+nav ul li a {
+  position: relative;
+  color: var(--clr);
+  transition: .3s ease-out;
+}
+nav ul li a:hover {
+  color: #ccc;
+}
+
+.option {
+  position: relative;
+  left: -20px;
+  display: flex;
+  background: var(--clr-bg);
+  color: white;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 10px 10px 10px 30px;
+  transition: 0.5s;
+  overflow: hidden;
+  color: var(--clr);
+  cursor: pointer;
+}
+button {
+  border-color: var(--clr-border);
+}
+button:hover {
+  border-color: var(--clr-border-hover);
+}
+#home h2 {
+  color: var(--clr);
+}
+#about h2,
+p {
+  color: var(--clr);
+}
+#service article {
+  background: var(--clr-card);
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 20px;
+  border-radius: 10px;
+}
+#service article:hover {
+  background: var(--clr-card-hover);
+  transform: translateY(-20px);
+}
+#service article p {
+  color: var(--clr);
+  width: 250px;
+}
+#project .slide .slide-item {
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  background: var(--clr-card);
+  margin: 5px;
+  padding: 10px;
+  color: var(--clr);
+  border-radius: 5px;
+}
+
+/* slide */
+
+#contact .link {
+  display: flex;
+}
+#contact .link a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  color: white;
+  font-size: 1.4em;
+  border-radius: 50%;
+  transition: 0.5s;
+  margin-right: 5px;
+}
+
+#contact .link a:hover {
+  scale: 1.1;
+}
+.ser-contact {
+  position: absolute;
+  width: 100%;
+  transform: translateY(60px);
+  left: 0;
+  padding: 0 50px;
+}
+
+#contact form {
+  position: relative;
+}
+#contact form .inputBox {
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+}
+#contact form .inputBox ion-icon {
+  color: var(--clr);
+}
+#contact form .inputBox input {
+  position: relative;
+  background: transparent;
+  border-bottom: 1px solid gray;
+  width: 350px;
+  outline: none;
+  color: var(--clr-text);
+  color: var(--clr);
+  transition: 0.5s;
+}
+#contact form .inputBox span {
+  position: absolute;
+  color: gray;
+  pointer-events: none;
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+#contact form .inputBox input:focus,
+#contact form .inputBox input:valid {
+  border-bottom: 1px solid rgb(176, 28, 133);
+}
+#contact form .inputBox input:valid ~ span,
+#contact form .inputBox input:focus ~ span {
+  transform: translateY(-20px);
+  letter-spacing: normal;
+  font-weight: 500;
+  font-size: 0.9em;
+  background: var(--clr-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#contact form button {
+  padding: 7px 0;
+  border-radius: 60px;
+  font-size: 1em;
+  transition: 0.5s;
+  border: 2px solid var(--clr-border);
+}
+#contact form button:hover {
+  letter-spacing: 0.1em;
+  border-color: var(--clr-border-hover);
+}
